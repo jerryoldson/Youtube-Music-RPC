@@ -1,0 +1,27 @@
+{
+  "name": "youtube-music-rpc",
+  "version": "1.0.0",
+  "description": "A Youtube Music APP made with electron that adds Discord Rich Presence integration.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron --trace-warnings ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerryoldson/Youtube-Music-RPC.git"
+  },
+  "keywords": [
+    "discord",
+    "yt",
+    "ytmusic"
+  ],
+  "author": "jerryoldson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jerryoldson/Youtube-Music-RPC/issues"
+  },
+  "homepage": "https://github.com/jerryoldson/Youtube-Music-RPC#readme",
+  "dependencies": {
+    "electron": "^30.0.8"
+  }
+}
