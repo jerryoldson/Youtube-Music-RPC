@@ -1,6 +1,6 @@
 {
   "name": "youtube-music-rpc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Youtube Music APP made with electron that adds Discord Rich Presence integration.",
   "main": "main.js",
   "scripts": {
