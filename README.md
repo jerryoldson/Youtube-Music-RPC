@@ -44,22 +44,33 @@
   </p>
 </div>
 
-### Built With
+## ⏬ Download
+You can found the Windows installer in the [releases](https://github.com/jerryoldson/Youtube-Music-RPC/releases) section.
 
-* [![electron][electron.js]][electron-url]
+## 📝 Description
+This is a simple project that opens the Youtube Music website in a electron window and shows what you're listening in your discord profile.
+Currently it just has the Discord RPC integration and a tray icon with a button that shows and finalizes the application.
+
+![image](https://github.com/jerryoldson/Youtube-Music-RPC/assets/140029469/1db44a41-174d-4cba-a0b4-1f51634c5ba9)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
-## Issues
-See the [open issues](https://github.com/jerryoldson/Youtube-Music-RPC/issues) for a full list of proposed features (and known issues).
+## 🔨 Features/Issues
+See the [open issues](https://github.com/jerryoldson/Youtube-Music-RPC/issues) for a full list of proposed features and known issues.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
-## License
+## 📜 License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### 🙌 Built With
+
+* [![electron][electron.js]][electron-url]
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
