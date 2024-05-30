@@ -38,8 +38,11 @@ let tray = null;
 app.whenReady().then(() => {
     createWindow();
     DSRPCEvents();
-
-    tray = new Tray('./build/goodicon.png')
+    
+    const trayIcnPath = process.env.APP_DEV
+        ? path.join(__dirname, `/build/icon.png`)
+        : path.join(__dirname, `../../build/icon.png`);
+    tray = new Tray(trayIcnPath);
     const contextMenu = Menu.buildFromTemplate([
         { label: 'Mostrar', type: 'normal', click: () => win.show() },
         { label: 'Salir', type: 'normal', click: () => app.exit() },
