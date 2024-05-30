@@ -20,6 +20,9 @@ const createWindow = () => {
             devTools: true
         },
     });
+    win.webContents.setWindowOpenHandler(() => {
+        return { action: "deny" };
+    });
     win.removeMenu();
 
     win.loadURL("https://music.youtube.com/").then(() => {
