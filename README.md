@@ -29,7 +29,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/jerryoldson/Youtube-Music-RPC">
-    <img src="build/goodicon.png" alt="Logo" width="80" height="80">
+    <img src="build/icon.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Youtube Music RPC</h3>
