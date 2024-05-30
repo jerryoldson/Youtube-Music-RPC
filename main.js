@@ -1,3 +1,4 @@
+const { autoUpdater } = require('electron-updater');
 const { ipcMain, app, BrowserWindow, Menu, Tray } = require('electron');
 const path = require('path');
 const IPC = require('./src/connection');
@@ -23,6 +24,7 @@ const createWindow = () => {
 
     win.loadURL("https://music.youtube.com/").then(() => {
         win.show();
+        autoUpdater.checkForUpdates();
     });
 
     win.on('close', (evt) => {
