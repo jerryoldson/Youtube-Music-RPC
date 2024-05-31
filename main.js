@@ -1,7 +1,7 @@
 const { autoUpdater } = require('electron-updater');
 const { ipcMain, app, BrowserWindow, Menu, Tray } = require('electron');
 const path = require('path');
-const IPC = require('./src/connection');
+const initializeIPC = require('./src/connection');
 var win = null;
 app.disableHardwareAcceleration(false);
 
@@ -27,7 +27,7 @@ const createWindow = () => {
 
     win.loadURL("https://music.youtube.com/").then(() => {
         win.show();
-        autoUpdater.checkForUpdates();
+        discordConnection();
     });
 
     win.on('close', (evt) => {
@@ -39,9 +39,7 @@ const createWindow = () => {
 let tray = null;
 
 app.whenReady().then(() => {
-    createWindow();
-    DSRPCEvents();
-    
+    autoUpdater.checkForUpdates();
     const trayIcnPath = process.env.APP_DEV
         ? path.join(__dirname, `/build/icon.png`)
         : path.join(__dirname, `../../build/icon.png`);
@@ -54,8 +52,16 @@ app.whenReady().then(() => {
     tray.setContextMenu(contextMenu)
     tray.on('double-click', () => {
         win.show();
-    })
+    });
+    createWindow();
 });
+
+async function discordConnection() {
+    const IPC = await initializeIPC();
+    if (IPC !== null) {
+        DSRPCEvents();
+    }
+}
 
 function DSRPCEvents() {
     ipcMain.on('dsrpc', (e, msg) => {
@@ -65,4 +71,4 @@ function DSRPCEvents() {
             IPC.clearActivity();
         }
     })
-}
+};
