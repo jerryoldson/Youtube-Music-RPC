@@ -8,6 +8,17 @@
     "build": "electron-builder build --win --publish never",
     "deploy": "electron-builder build --win --publish always"
   },
+  "build": {
+    "extraResources": [
+      {
+        "from": "build",
+        "to": "build",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jerryoldson/Youtube-Music-RPC.git"
